@@ -15,7 +15,6 @@ skin: black
 hair: black
 
 armor_class: 13
-initiative: 2
 speed: 30
 hit_points: 14
 hit_dice: 2d8
@@ -79,9 +78,12 @@ attacks:
 gp: 5
 
 equipment:
-  - Leather Armor
-  - Shield
-  - Schimitar
+  - name: Leather Armor
+    tags: armor
+  - name: Shield
+    tags: shield
+  - name: Schimitar
+    tags: weapon
 
 treasure:
   - Stone
@@ -101,7 +103,8 @@ organizations:
 
 
 notes:
+  - name: Druidic Focus
   - name: Druid Circle of the Land
     tags:
-      - ability
+        druid feature
     text:

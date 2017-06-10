@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>{name} Character Sheet</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div class='container'>
@@ -6,7 +17,7 @@
             <h1>{name}</h1>
         </div>
         <div class='col-md-8'>
-            <table class='table table-bordered'>
+            <table class='table' style='margin-top: 20px'>
                 <td>
                     <p><a href="https://www.google.com/#q=dnd 5e race {race}}">{race}</a></p>
                 </td>
@@ -24,7 +35,7 @@
     </div>
 
     <div class='row'>
-        <div class='col-md-1'>
+        <div class='col-md-1 hidden-xs'>
             {#abilities_list}
             <div class='text-center'>
                 <p><small><a href='https://www.google.com/#q=dnd 5e ability {ability}'>{ability}</a></small></p>
@@ -33,6 +44,16 @@
             </div>
             {/abilities_list}
         </div>
+        <div class='visible-xs'>
+            {#abilities_list}
+            <div class='text-center col-xs-2'>
+                <p><small><a href='https://www.google.com/#q=dnd 5e ability {ability}'>{ability}</a></small></p>
+                <h3 class=''><strong>{mod}</strong></h3>
+                <p>{base}</p>
+            </div>
+            {/abilities_list}
+        </div>
+
         <div class='col-md-3'>
             <h5><a href='https://www.google.com/#q=dnd 5e saving throws'>Saving Throws</a></h5>
             <table class='table'>
@@ -57,7 +78,7 @@
             </table>
         </div>
 
-        <div class='col-md-4'>
+        <div class='col-md-8'>
             <h5>Attacks</h5>
             <table class='table'>
                 {#attacks}
@@ -90,12 +111,24 @@
                     </tr>
                     {/spells}
                 </table>
-            </div>
-    </div>
+        <h5>Equipment</h5>
+        <table class='table'>
+            {#equipment}
+            <tr>
+                <td>
+                    <a href="https://www.google.com/#q=dnd 5 equipment {name}">{name}</a>
+                </td>
+                <td>
+                    {#tags}
+                    <span class='label label-info'><a href="https://www.google.com/#q=dnd 5 {.}">{.}</a></span>
+                    {/tags}
+                </td>
+                <td>{text}</td>
+            <tr>
+            {/equipment}
+        </table>
 
-    
-    <div class='row'>
-        <h4>Notes</h4>
+        <h5>Notes</h5>
         <table class='table'>
             {#notes}
             <tr>
@@ -111,10 +144,13 @@
             <tr>
             {/notes}
         </table>
+
+            </div>
+
+               </div>
     </div>
 
-
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
     <style>
         @import url('https://fonts.googleapis.com/css?family=Raleway');
 
@@ -148,3 +184,5 @@
     }
     </style>
 </div>
+</body>
+</html>
