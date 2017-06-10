@@ -17,8 +17,8 @@ hair: black
 armor_class: 13
 initiative: 2
 speed: 30
-hit_points: 9
-hit_dice: 1d8
+hit_points: 14
+hit_dice: 2d8
 
 abilities:
   Strength:
@@ -35,7 +35,7 @@ abilities:
     mod: +1
   Wisdom:
     base: 10
-    mod: 0
+    mod: +1
   Charisma:
     base: 9
     mod: -1
@@ -52,20 +52,24 @@ profenciences:
   - Survival
 
 
-spellcasting_ability: ""
-spell_save_dc: ""
-spell_attack_bonus: ""
+spellcasting_ability: Wisdom
+spell_save_dc: "8 + your proficiency bonus + your Wisdom modifier"
+spell_attack_bonus: "your proficiency bonus + your Wisdom modifier"
 
 cantrips:
   - name: Druidcraft
   - name: Mending
+  - name: Thunderclap
+    note: 1d6, CON save, 100 feet 
 
 spells:
   - name: Healing word
     spent: false
     level: 1
+  - name: 
 
 attacks:
+  - name: Wild Shape
   - name: Schimitar
     bonus: +5
     damage: 1d6+3 5 feet slashing
@@ -94,3 +98,10 @@ personality:
 
 organizations:
   - clan Myastan
+
+
+notes:
+  - name: Druid Circle of the Land
+    tags:
+      - ability
+    text:
