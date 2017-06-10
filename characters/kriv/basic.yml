@@ -1,0 +1,96 @@
+name: Kriv
+playername: Alex
+race: Dragonborn
+class: 
+    name: Druid
+level: 2
+exerience_points: 0
+background: Hermit
+alignment: Chaotic Good
+age: 30
+height: 6
+weight: 190
+eyes: green
+skin: black
+hair: black
+
+armor_class: 13
+initiative: 2
+speed: 30
+hit_points: 9
+hit_dice: 1d8
+
+abilities:
+  Strength:
+    base: 17
+    mod: +3
+  Dexterity: 
+    base: 14
+    mod: +2
+  Constitution:
+    base: 13
+    mod: +1
+  Intelligence:
+    base: 12
+    mod: +1
+  Wisdom:
+    base: 10
+    mod: 0
+  Charisma:
+    base: 9
+    mod: -1
+
+profeciency_bonus: +2
+
+profenciences:
+  - Intelligence
+  - Wisdom
+
+  - Medicine
+  - Perception
+  - Religion
+  - Survival
+
+
+spellcasting_ability: ""
+spell_save_dc: ""
+spell_attack_bonus: ""
+
+cantrips:
+  - name: Druidcraft
+  - name: Mending
+
+spells:
+  - name: Healing word
+    spent: false
+    level: 1
+
+attacks:
+  - name: Schimitar
+    bonus: +5
+    damage: 1d6+3 5 feet slashing
+  - name: Acid Breath
+    damage: 2d6 Acid 30ft line
+
+gp: 5
+
+equipment:
+  - Leather Armor
+  - Shield
+  - Schimitar
+
+treasure:
+  - Stone
+
+personality:
+  traits:
+    value: ""
+    ref:  ""
+    
+  ideals: |
+    value: ""
+    ref: ""
+
+
+organizations:
+  - clan Myastan

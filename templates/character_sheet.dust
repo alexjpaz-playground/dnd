@@ -1,0 +1,130 @@
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class='container'>
+    <div class='row'>
+        <div class='col-md-4'>
+            <h1>{name}</h1>
+        </div>
+        <div class='col-md-8'>
+            <table class='table table-bordered'>
+                <td>
+                    <p><a href="https://www.google.com/#q=dnd 5e race {race}}">{race}</a></p>
+                </td>
+                <td>
+                    <a href="https://www.google.com/#q=dnd 5e {class.name} {level}">{level}</a>
+                </td>
+                <td>
+                    <a href="https://www.google.com/#q=dnd 5e background {background}}">{background}</a>
+                </td>
+                <td>
+                    <a href="https://www.google.com/#q=dnd 5e alignment {alignment}}">{alignment}</a>
+                </td>
+            </table>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-1'>
+            {#abilities_list}
+            <div class='text-center'>
+                <p><small><a href='https://www.google.com/#q=dnd 5e ability {ability}'>{ability}</a></small></p>
+                <h3 class=''><strong>{mod}</strong></h3>
+                <p>{base}</p>
+            </div>
+            {/abilities_list}
+        </div>
+        <div class='col-md-3'>
+            <h5><a href='https://www.google.com/#q=dnd 5e saving throws'>Saving Throws</a></h5>
+            <table class='table'>
+                {#saving_throws}
+                <tr>
+                    <td>{#proficient}<i class='glyphicon glyphicon-star'></i>{/proficient}</td>
+                    <td class='text-center'>{mod}</td>
+                    <td><small><a href='https://www.google.com/#q=dnd 5e saving throws {ability}'>{ability}</a></small></td>
+                </tr>
+                {/saving_throws}
+            </table>
+
+            <h5>Skills</h5>
+            <table class='table'>
+                {#skills}
+                <tr>
+                    <td>{#proficient}<i class='glyphicon glyphicon-star'></i>{/proficient}</td>
+                    <td class='text-center'>{mod}</td>
+                    <td><small><a href='https://www.google.com/#q=dnd 5e skills {skill}'>{skill}</a></small></td>
+                </tr>
+                {/skills}
+            </table>
+        </div>
+
+        <div class='col-md-4'>
+            <h5>Attacks</h5>
+            <table class='table'>
+                {#attacks}
+                <tr>
+                    <td><a href="https://www.google.com/#q=dnd 5e attack {name}">{name}</a></td>
+                    <td>{bonus}</td>
+                    <td>{damage}</td>
+                </tr>
+                {/attacks}
+            </table>
+
+            <h5>Cantrips</h5>
+                <table class='table'>
+                {#cantrips}
+                    <tr>
+                    <td>
+                        <a href="https://www.google.com/#q=dnd 5e cantrips {name} {ref}">{name}<small> {ref}</a></small>
+                    </td>
+                    <tr>
+                {/cantrips}
+                </table>
+
+            <h5>Spells</h5>
+                <table class='table'>
+                    {#spells}
+                    <tr>
+                        <td><a href="https://www.google.com/#q=dnd 5e spells {name}">{name}</a></td>
+                        <td>{level}</td>
+                    </tr>
+                    {/spells}
+                </table>
+            </div>
+    </div>
+
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        li {
+            list-style-type: circle;
+        }
+
+        li.proficient {
+            list-style-type: disc;
+        }
+
+        li strong,
+         {
+            display: inline-block;
+            width: 16px;
+            margin-right : 6px;
+            text-align: right;
+        }
+
+        .attacks td {
+        }
+
+    @media print {
+      a[href]:after {
+        content: "";
+      }
+    }
+    </style>
+</div>

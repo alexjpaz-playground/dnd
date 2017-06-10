@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "nodemon -e js,yaml,yml,dust"
+  },
+  "dependencies": {
+    "dustjs-helpers": "^1.7.3",
+    "dustjs-linkedin": "^2.7.5",
+    "js-yaml": "^3.8.4",
+    "nodemon": "^1.11.0"
+  }
+}
