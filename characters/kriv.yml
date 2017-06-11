@@ -63,9 +63,11 @@ cantrips:
 
 spells:
   - name: Healing word
-    spent: false
-    level: 1
-  - name: 
+  - name: Moonbeam
+    text: |
+      Range	150 ft, Duration Up to 10 minutes
+  - name: Barkskin
+
 
 attacks:
   - name: Wild Shape

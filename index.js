@@ -1,3 +1,5 @@
+const server = require('./lib/server');
+
 const Character = require('./lib/character');
 
 const fs = require('fs');
@@ -9,11 +11,16 @@ dust.loadSource(compiled);
 
 const yaml = require('js-yaml');
 
-const data = yaml.safeLoad(fs.readFileSync('./characters/kriv/basic.yml', 'utf8'));
+['kriv'].forEach((character) => {
+    const data = yaml.safeLoad(fs.readFileSync(`./characters/${character}.yml`, 'utf8'));
 
-var character = new Character(data);
+    var characterData = new Character(data);
 
-
-dust.render('character_sheet', character, function(err, out) {
-    fs.writeFileSync('./out.html', out);
+    dust.render('character_sheet', characterData, function(err, out) {
+        const publicDir = "./public";
+        if (!fs.existsSync(publicDir)){
+            fs.mkdirSync(publicDir);
+        }
+        fs.writeFileSync(`${publicDir}/${character}.html`, out);
+    });
 });
