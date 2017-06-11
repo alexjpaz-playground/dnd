@@ -1,0 +1,19 @@
+{>"layouts/basic"/}
+{<pageContent}
+<h1>Characters</h1>
+
+
+{#characters}
+<div class="list-group">
+  <a href="{name}.html" class="list-group-item">
+    <h4 class="list-group-item-heading">
+        <strong>{name} {level}</strong>
+    </h4>
+    <p class="list-group-item-text">
+        <span>{class.name} {race}</span>
+    </p>
+  </a>
+</div>
+{/characters}
+</ul>
+{/pageContent}
