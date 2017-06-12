@@ -107,6 +107,13 @@ organizations:
 notes:
   - name: Druidic Focus
   - name: Druid Circle of the Land
-    tags:
-        druid feature
-    text:
+    tags: druid feature
+  - name: Clan Myastan
+  - name: Prays to behemoth
+    tags: dragonborn gods
+  - name: Light Armor, Medium Armor, Shields, Clubs, Daggers, Darts, Javelins, Maces, Quaterstaggs, Schimitars, Sickls, Slings, Spears, Herbalism Kit 
+    tags: profenciences
+  - name: Languages - Commom, Draconic, Druidic
+    tags: profenciences
+
+  

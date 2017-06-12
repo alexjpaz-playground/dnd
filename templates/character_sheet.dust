@@ -1,158 +1,46 @@
 {>"layouts/basic"/}
+{>"character_sheet/style"/}
 {<pageContent}
-    <div class='row'>
-        <div class='col-md-4'>
-            <h1>{name}</h1>
-        </div>
-        <div class='col-md-8'>
-            <table class='table' style='margin-top: 20px'>
-                <td>
-                    <p><a href="https://www.google.com/#q=dnd 5e race {race}}">{race}</a></p>
-                </td>
-                <td>
-                    <a href="https://www.google.com/#q=dnd 5e {class.name} {level}">{level}</a>
-                </td>
-                <td>
-                    <a href="https://www.google.com/#q=dnd 5e background {background}}">{background}</a>
-                </td>
-                <td>
-                    <a href="https://www.google.com/#q=dnd 5e alignment {alignment}}">{alignment}</a>
-                </td>
-            </table>
-        </div>
+{>"character_sheet/header"/}
+<div class='row'>
+    <div class='col-md-1 hidden-xs'>
+        {>"character_sheet/abilities"/}
+    </div>
+    <div class='visible-xs'>
+        {>"character_sheet/abilities"/}
     </div>
 
-    <div class='row'>
-        <div class='col-md-1 hidden-xs'>
-            {#abilities_list}
-            <div class='text-center'>
-                <p><small><a href='https://www.google.com/#q=dnd 5e ability {ability}'>{ability}</a></small></p>
-                <h3 class=''><strong>{mod}</strong></h3>
-                <p>{base}</p>
-            </div>
-            {/abilities_list}
-        </div>
-        <div class='visible-xs'>
-            {#abilities_list}
-            <div class='text-center col-xs-2'>
-                <p><small><a href='https://www.google.com/#q=dnd 5e ability {ability}'>{ability}</a></small></p>
-                <h3 class=''><strong>{mod}</strong></h3>
-                <p>{base}</p>
-            </div>
-            {/abilities_list}
-        </div>
-
-        <div class='col-md-3'>
-            <h5><a href='https://www.google.com/#q=dnd 5e saving throws'>Saving Throws</a></h5>
-            <table class='table'>
-                {#saving_throws}
-                <tr>
-                    <td>{#proficient}<var title='Profeciency Bonus'>{profeciency_bonus}</var>{/proficient}</td>
-                    <td class='text-center'>{mod}</td>
-                    <td><small><a href='https://www.google.com/#q=dnd 5e saving throws {ability}'>{ability}</a></small></td>
-                </tr>
-                {/saving_throws}
-            </table>
-
-            <table class='table'>
-                {#skills}
-                <tr>
-                    <td>{#proficient}<i class='glyphicon glyphicon-star'></i>{/proficient}</td>
-                    <td class='text-center'>{mod}</td>
-                    <td><small><a href='https://www.google.com/#q=dnd 5e skills {skill}'>{skill}</a></small></td>
-                </tr>
-                {/skills}
-            </table>
-        </div>
-
-        <div class='col-md-8'>
-            <h5>Attacks</h5>
-            <table class='table'>
-                {#attacks}
-                <tr>
-                    <td><a href="https://www.google.com/#q=dnd 5e attack {name}">{name}</a></td>
-                    <td>{bonus}</td>
-                    <td>{damage}</td>
-                </tr>
-                {/attacks}
-            </table>
-
-            <h5>Cantrips</h5>
-                <table class='table'>
-                {#cantrips}
-                    <tr>
-                    <td>
-                        <a href="https://www.google.com/#q=dnd 5e cantrips {name} {ref}">{name}<small> {ref}</small>
-                    </td>
-<td>{note}</td>
-                    <tr>
-                {/cantrips}
-                </table>
-
-            <h5>Spells</h5>
-                <table class='table'>
-                    {#spells}
-                    <tr>
-                        <td><a href="https://www.google.com/#q=dnd 5e spells {name}">{name}</a></td>
-                        <td>{text}</td>
-                    </tr>
-                    {/spells}
-                </table>
-        <h5>Equipment</h5>
-        <table class='table'>
-            {#equipment}
-            <tr>
-                <td>
-                    <a href="https://www.google.com/#q=dnd 5 equipment {name}">{name}</a>
-                </td>
-                <td>
-                    {#tags}
-                    <span class='label label-info'><a href="https://www.google.com/#q=dnd 5 {.}">{.}</a></span>
-                    {/tags}
-                </td>
-                <td>{text}</td>
-            <tr>
-            {/equipment}
-        </table>
-
-        <h5>Notes</h5>
-        <table class='table'>
-            {#notes}
-            <tr>
-                <td>
-                    <a href="https://www.google.com/#q=dnd 5 {name}">{name}</a>
-                </td>
-                <td>
-                    {#tags}
-                    <span class='label label-info'><a href="https://www.google.com/#q=dnd 5 {.}">{.}</a></span>
-                    {/tags}
-                </td>
-                <td>{text}</td>
-            <tr>
-            {/notes}
-        </table>
-
-            </div>
-
-               </div>
+    <div class='col-md-3'>
+        {>"character_sheet/saving_throws"/}
+        {>"character_sheet/skills"/}
     </div>
 
-    
-    <style>
+    <div class='col-md-8'>
+        {>"character_sheet/combat"/}
+        {>"character_sheet/attacks"/}
+        {>"character_sheet/spells"/}
+        {>"character_sheet/equipment"/}
+        {>"character_sheet/notes"/}
+    </div>
+</div>
+<p class='text-muted'>This character sheet was generated at <u>{timestamp}</u></p>
 
-        li {
-            list-style-type: circle;
-        }
+
+<style>
+
+li {
+    list-style-type: circle;
+}
 
         li.proficient {
             list-style-type: disc;
         }
 
         li strong,
-         {
+        {
             display: inline-block;
             width: 16px;
-            margin-right : 6px;
+                margin-right : 6px;
             text-align: right;
         }
 
@@ -163,18 +51,17 @@
             color: #fff;
         }
 
-    @media print {
-      a[href]:after {
-        content: "";
-      }
-    }
+        @media print {
+            a[href]:after {
+                content: "";
+            }
+        }
 
-@media print {
-  .container {
-    width:100%;
-  }
-}
-    </style>
-</div>
+        @media print {
+            .container {
+                width:100%;
+            }
+        }
+</style>
 {/pageContent}
 

@@ -1,0 +1,4 @@
+<div class='panel panel-default'>
+    <h3>{value}</h3>
+    <p>{>"character_sheet/link"/}</p>
+</div>

@@ -1,0 +1,12 @@
+<h5>Cantrips</h5>
+<table class='table table-condensed'>
+{#cantrips}
+    <tr>
+    <td>
+        <a href="https://www.google.com/#q=dnd 5e cantrips {name} {ref}">{name}<small> {ref}</small>
+    </td>
+<td>{note}</td>
+    <tr>
+{/cantrips}
+</table>
+

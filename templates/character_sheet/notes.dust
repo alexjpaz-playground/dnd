@@ -1,0 +1,20 @@
+<h5>Notes</h5>
+<table class='table table-condensed'>
+    {#notes}
+    <tr>
+        <td>
+            <div class='pull-right'>
+                {#tags}
+                <span class='label label-info'><a href="https://www.google.com/#q=dnd 5 {.}">{.}</a></span>
+                {/tags}
+                </span>
+            </div>
+            <div>
+                <a href="https://www.google.com/#q=dnd 5 {name}">{name}</a>
+            </div>
+            <small>{text} </small>
+
+        </td>
+    <tr>
+    {/notes}
+</table>

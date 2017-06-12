@@ -1,0 +1,10 @@
+<table class='table table-condensed'>
+    {#skills}
+    <tr>
+        <td>{#proficient}<strong title='Profeciency Bonus'>{profeciency_bonus}</strong>{/proficient}</td>
+        <td class='text-center'>{mod}</td>
+        <td><small><a href='https://www.google.com/#q=dnd 5e skills {skill}'>{skill}</a></small></td>
+    </tr>
+    {/skills}
+</table>
+

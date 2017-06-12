@@ -1,0 +1,12 @@
+<h5>Attacks</h5>
+<table class='table table-condensed'>
+    {#attacks}
+    <tr>
+        <td><a href="https://www.google.com/#q=dnd 5e attack {name}">{name}</a></td>
+        <td>{bonus}</td>
+        <td>{damage}</td>
+    </tr>
+    {/attacks}
+</table>
+
+

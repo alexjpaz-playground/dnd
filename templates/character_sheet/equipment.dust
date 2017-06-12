@@ -1,0 +1,16 @@
+<h5>Equipment</h5>
+<table class='table table-condensed'>
+{#equipment}
+<tr>
+    <td>
+        <a href="https://www.google.com/#q=dnd 5 equipment {name}">{name}</a>
+    </td>
+    <td>
+        {#tags}
+        <span class='label label-info'><a href="https://www.google.com/#q=dnd 5 {.}">{.}</a></span>
+        {/tags}
+    </td>
+    <td>{text}</td>
+<tr>
+{/equipment}
+</table>

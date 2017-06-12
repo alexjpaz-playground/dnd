@@ -1,0 +1,8 @@
+{#abilities_list}
+<div class='text-center'>
+    <p><small><a href='https://www.google.com/#q=dnd 5e ability {ability}'>{ability}</a></small></p>
+    <h3 class=''><strong>{mod}</strong></h3>
+    <p>{base}</p>
+</div>
+{/abilities_list}
+

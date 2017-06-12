@@ -1,0 +1,23 @@
+<div class='row'>
+    <div class='col-md-4'>
+        <h1>{name}</h1>
+    </div>
+    <div class='col-md-8'>
+        <table class='table' style='margin-top: 20px'>
+            <td>
+                <p>{>"character_sheet/link" context="race" term="{race}"/}</p>
+            </td>
+            <td>
+                <a href="https://www.google.com/#q=dnd 5e {class.name} {level}">{level}</a>
+            </td>
+            <td>
+                <a href="https://www.google.com/#q=dnd 5e background {background}}">{background}</a>
+            </td>
+            <td>
+                <a href="https://www.google.com/#q=dnd 5e alignment {alignment}}">{alignment}</a>
+            </td>
+        </table>
+    </div>
+</div>
+
+

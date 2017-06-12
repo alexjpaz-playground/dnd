@@ -1,0 +1,14 @@
+<div class='row text-center'>
+    <div class='col-xs-3'>
+        {>"character_sheet/bubble" term="Armor Class" value="{armor_class}" /}
+    </div>
+    <div class='col-xs-3'>
+        {>"character_sheet/bubble" term="Hit Points" value="{hit_points}" /}
+    </div>
+    <div class='col-xs-3'>
+        {>"character_sheet/bubble" term="Hit Dice" value="{hit_dice}" /}
+    </div>
+    <div class='col-xs-3'>
+        {>"character_sheet/bubble" term="Speed" value="{speed}" /}
+    </div>
+</div>

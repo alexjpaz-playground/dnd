@@ -1,0 +1,10 @@
+<h5>Spells</h5>
+<table class='table table-condensed'>
+    {#spells}
+    <tr>
+        <td><a href="https://www.google.com/#q=dnd 5e spells {name}">{name}</a></td>
+        <td>{text}</td>
+    </tr>
+    {/spells}
+</table>
+

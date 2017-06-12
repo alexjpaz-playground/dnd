@@ -1,0 +1,12 @@
+<h5>{>"character_sheet/link" term="Saving Throws"/}</h5>
+<table class='table table-condensed'>
+    {#saving_throws}
+    <tr>
+        <td>{#proficient}<strong title='Profeciency Bonus'>{profeciency_bonus}</strong>{/proficient}</td>
+        <td class='text-center'>{mod}</td>
+        <td><small><a href='https://www.google.com/#q=dnd 5e saving throws {ability}'>{ability}</a></small></td>
+    </tr>
+    {/saving_throws}
+</table>
+
+
